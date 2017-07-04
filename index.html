@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="Author" content="" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>腾讯课堂</title>
+	</head>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/superslide.2.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/slider.css" />
+	<link rel="stylesheet" type="text/css" href="css/all_class_menu.css" />
+	<style type="text/css">
+
+	*{margin:0;padding:0;list-style:none;}
+	body{font-size:12px;font-family:'微软雅黑';color:#666;}
+	a{text-decoration:none;}
+	h1,h2,h3,h4{font-weight:normal;}
+
+	/*header*/
+	.header{width:1180px;height:100px;margin:0 auto;padding-right:0px;}
+	.header .logo{width:297px;height:81px;background:url(images/logo.png);background-position:0 18px;background-repeat:no-repeat;}
+	.header .header_right{float:right;}
+	.header .header_right .person_information{width:135px;height:40px;float:right;margin-top:10px;}
+	.header .header_right .person_information .img_vip{border-radius:20px;}
+	.header .header_right .person_information .vip_menu{float:right;line-height:40px;color:#000;}
+	.header .header_right .search{float:left;margin:10px 40px 0 0;}
+	.header .header_right .search .search_line{width:450px;height:36px;border:2px solid #188EEE;}
+	.header .header_right .search .search_line .search_ico{width:54px;height:36px;background:#188EEE;float:right;}
+	.header .header_right .search .search_line .search_ico .icon{margin-top:9px;margin-left:17px;width:19px;height:19px;background:url(images/logo.png) no-repeat;
+																background-position:-218px -400px;}
+	.header .header_right .search .search_line .search_menu{line-height:36px;margin-left:15px;float:left;}
+	.header .header_right .search .search_line .search_menu font{color:#000;}
+	.header .header_right .search .keywords_list ul li{float:left;margin-right:24px;line-height:32px;}
+	.header .header_right .search .keywords_list ul li font{color:#E85308;}
+	/*header*/
+
+	/*banner*/
+	.banner{width:100%;}
+	.banner .top{width:1180px;height:48px;margin:0 auto;font-size:16px;}
+	.banner .top .left{width:476px;float:left;}
+	.banner .top .left .left_menu{width:210px;background:#188EEE;float:left;height:50px;line-height:48px;padding-left:10px;}
+	.banner .top .left .left_menu .icon_list{width:22px;margin:16px 0 0 6px;float:left;}
+	.banner .top .left .left_menu a{font-size:16px;}
+	.banner .top .left .left_menu .icon_list .icon{border-top:2px #fff solid;width:20px;height:5px;}
+	.banner .top .left .left_menu a{color:#fff;margin-left:10px;}
+	.banner .top .left .center_list{float:right;padding-top:5px;height:43px;}
+	.banner .top .left .center_list ul li{float:left;line-height:48px;margin-left:10px;color:#000;}
+	.banner .top .right_menu{float:right;line-height:48px;font-size:13px;padding-top:5px;height:43px;color:#000;}
+
+	.banner .center{width:100%;height:300px;overflow:hidden;}
+	
+	.banner .bottom{width:986px;margin:0 auto;border-bottom:1px #EAEAEA solid;border-right:1px #EAEAEA solid;padding-left:220px;height:125px;}
+	.all_class{width:1180px;margin:0 auto;height:1px;}
+	/*banner*/
+
+	/*central_content*/
+	.central_content_1{width:1200px;margin:0 auto;margin-top:20px;}
+	.central_content_1 .type_line{height:40px;border-bottom:1px #ccc solid;padding-top:10px;width:1200px;}
+	.central_content_1 .type_line h2{width:200px;font-size:17px;line-height:40px;float:left;}
+	.central_content_1 .type_line .change{float:right;margin-top:10px;}
+	.central_content_1 .class_name{margin-top:20px;height:200px;}
+	.central_content_1 .class_name ul li{width:220px;height:180px;display:block;padding:7px;border:1px solid transparent;float:left;margin-right:5px;}
+	.central_content_1 .class_name ul li:hover{border:1px #ccc solid;box-shadow:0px 5px 9px 3px #ccc;}
+	.central_content_1 .class_name .nonem{margin-right:0;}
+	.central_content_1 .class_name h2{margin-top:5px;display:block;font-size:16px;}
+	.central_content_1 .class_name span{color:#8cc152;}
+	.central_content_1 .class_name p{display:block;line-height:20px;}
+
+	.central_content_1 .type_line1{height:40px;border-bottom:1px #ccc solid;padding-top:10px;width:1200px;}
+	.central_content_1 .type_line1 h2{width:200px;font-size:17px;line-height:40px;}
+
+	.central_content_2{width:100%;height:540px;color:#333;}
+	#gray{background:#eee;}
+	#white{background:#fff;}
+	.central_content_2 .IT_train{width:1200px;margin:0 auto;margin-top:20px;}
+	.central_content_2 .IT_train .train_line{border-bottom:1px #ccc solid;height:50px;padding-top:40px;}
+	.central_content_2 .IT_train .train_line h2{display:block;float:left;line-height:50px;width:222px;}
+	.central_content_2 .IT_train .train_line .train_menu{float:left;}
+	.central_content_2 .IT_train .train_line .train_menu ul li{display:block;float:left;width:90px;height:50px;margin-bottom:-1px;text-align:center;line-height:50px;cursor:pointer;font-size:14px;}
+	.central_content_2 .IT_train .train_line .train_menu ul li:hover{border-bottom:2px #188EEE solid; }
+	.central_content_2 .IT_train .train_imgbg{width:240px;height:0px;}
+	.central_content_2 .IT_train .train_img{height:420px;width:240px;position:relative;z-index:3;left:-20px;top:0;background:url(images/IT_train_1.png)}
+	#white .IT_train .train_img{height:420px;width:240px;position:relative;z-index:3;left:-20px;top:0;background:url(images/IT_train_1_2.png)}
+
+	.central_content_2 .IT_train .train_class{margin-left:226px;padding-top:20px;}
+	.central_content_2 .IT_train .train_class .train_class_content{float:left;width:735px;}
+	.central_content_2 .IT_train .train_class .train_class_content span{color:#8cc152;}
+	.central_content_2 .IT_train .train_class .train_class_content ul li{display:block;width:220px;padding:7px;float:left;margin:9px 0 0 9px;border:1px solid transparent;}
+	.central_content_2 .IT_train .train_class .train_class_content ul li:hover{border:1px #ccc solid;box-shadow:0px 5px 9px 3px #ccc;}
+	.central_content_2 .IT_train .train_class .train_class_list{float:right;width:230px;height:420px;margin-left:2px;padding-left:5px;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking{padding:10px 5px 0 5px;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking ul li{display:block;width:100%;;height:32px;line-height:32px;float:left;} 
+	.central_content_2 .IT_train .train_class .train_class_list .ranking ul li a{padding-left:5px;color:#333;font-size:13px;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking span{display:block;width:18px;height:18px;line-height:18px;margin-top:7px;margin-right:10px;background:#ccc;text-align:center;float:left;color:#fff;font-weight:bold;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .span1{background:#ED4300;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .span2{background:#FF7316;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .span3{background:#FF9C00;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .first{height:75px;padding-left:32px;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .first_li{height:95px;display:block;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .first_li p{margin-left:-8px;display:block;width:194px;color:#333;font-size:13px;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .first img{float:left;width:90px;height:50px;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .first .people{float:right;padding-left:8px;width:80px;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .first .people h3{color:#e85308;line-height:28px;}
+	.central_content_2 .IT_train .train_class .train_class_list .ranking .first .people font{display:block;line-height:25px;font-size:14px;color:#999;}
+	.central_content_2 .IT_train .train_class .train_class_list .menu_list ul li{display:block;width:115px;height:45px;float:left;text-align:center;line-height:50px;cursor:pointer;border-bottom:1px #ccc solid;font-size:16px;color:#666;}
+	.central_content_2 .IT_train .train_class .train_class_list .menu_list ul li:hover{border-bottom:1px #188EEE solid;color:#333;}
+
+	.central_content_3{width:100%;height:540px;color:#333;}
+	.central_content_3 .college{width:1200px;margin:0 auto;margin-top:20px;}
+	.central_content_3 .college .left_png{width:450px;float:left;}
+	.central_content_3 .college .left_png h1{font-size:20px;line-height:40px;}
+	.central_content_3 .college .right_png{width:735px;float:right;}
+	.central_content_3 .college .right_png .title_line{float:left;width:730px;border-bottom:1px #ccc solid;}
+	.central_content_3 .college .right_png .title_line ul li{display:block;float:left;width:90px;height:50px;margin-bottom:-2px;text-align:center;line-height:50px;cursor:pointer;font-size:14px;border:2px solid transparent;}
+	.central_content_3 .college .right_png .title_line ul li:hover{border-bottom:2px #188EEE solid;}
+	.central_content_3 .college .right_png .college_list{}
+	.central_content_3 .college .right_png .college_list ul li{display:block;width:220px;padding:7px;float:left;margin:9px 0 0 9px;border:1px solid transparent;}
+	.central_content_3 .college .right_png .college_list ul li:hover{border:1px #ccc solid;box-shadow:0px 5px 9px 3px #ccc;}
+	.central_content_3 .college .right_png .college_list span{color:#8cc152;}
+	.central_content_3 .college .right_png .college_list h2{margin-top:5px;display:block;font-size:16px;}
+	.central_content_3 .college .right_png .college_list p{display:block;width:194px;color:#333;font-size:13px;}
+
+	/*central_content*/
+	</style>
+<body>
+	<!--header start-->
+	<div class="header">
+		<div class="header_right">
+			<!--search start-->
+			<div class="search">
+				<div class="search_line">
+					<div class="search_menu"><font>课程</font> 丨 搜索课程</div>
+					<div class="search_ico"><div class="icon"></div></div>
+				</div>
+				<div class="keywords_list">
+					<ul>
+						<li>行测刷题</li> 
+						<li><font>倾蓝系列公开课</font></li> 
+						<li>雅思听力提分</li>
+						<li>Web建站速成</li>
+					</ul>
+				</div>
+			</div>
+			<!--search start-->
+			<!--person_information start-->
+			<div class="person_information">		
+				<img class="img_vip" src="images/g.jpg" width="40" height="40"></img>
+				<div class="vip_menu">个人中心 帮助</div>
+			</div>
+			<!--person_information start-->
+		</div>
+		<div class="logo"></div>
+	</div>
+	<!--header end-->
+
+	<!--banner start-->
+	<div class="banner">
+		<!--banner_top start-->
+		<div class="top">
+			<div class="left">
+				<div class="left_menu">
+					<div class="icon_list">
+						<div class="icon"></div>
+						<div class="icon"></div>
+						<div class="icon"></div>
+					</div>
+					<a href="javascript:void(0)">全部课程</a>
+				</div>
+				<div class="center_list">
+					<ul>
+						<li>设计学院 丨</li><i></i>
+						<li>精选合辑</li>
+						<li>学习论坛</li>
+					</ul>
+				</div>
+			</div>
+			<div class="right_menu">我要开课</div>
+		</div>
+		<!--banner_top end-->
+		
+		<!--banner_center start-->
+		<div class="center">
+			<div class="slider">
+			  <div class="bd">
+				<ul>
+				  <li><a target="_blank" href="#"><img src="images/1.jpg" /></a></li>
+				  <li><a target="_blank" href="#"><img src="images/2.jpg" /></a></li>
+				  <li><a target="_blank" href="#"><img src="images/3.jpg" /></a></li>
+				  <li><a target="_blank" href="#"><img src="images/4.jpg" /></a></li>
+				</ul>
+			  </div>
+			  <div class="hd">
+				<ul>
+				</ul>
+			  </div>
+			  <div class="pnBtn prev"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
+			  <div class="pnBtn next"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
+			</div>
+		</div>
+		<!--banner_center end-->
+
+		<!--banner_bottom start-->
+		<div class="bottom">
+			<img src="images/banner_bottom_1.jpg" />
+			<img src="images/banner_bottom_2.jpg" />
+			<img src="images/banner_bottom_3.jpg" />
+		</div>
+		<!--banner_bottom end-->
+
+		<!--all_class start-->
+		<div class="all_class">
+		<div class="mallCategory">
+			<div class="catList">
+				<ul class="clearfix">
+					<li class="J_MenuItem">
+						<h3><span></span><a href="#">职业技能 </a></h3>
+						<p class="itemCol"><a href="#">空调</a> <a href="#">LED电视 </a> <a href="#">冰箱 </a></p>
+					</li>
+					<li class="J_MenuItem">
+						<h3><span> </span> <a href="#">IT培训</a></h3>
+						<p class="itemCol"> <a href="#">空调扇 </a> <a href="#">挂烫机 </a> <a href="#">剃须刀 </a></p>
+					</li>
+					<li class="J_MenuItem">
+						<h3><span> </span><a href="#">语言学习 </a></h3>
+						<p class="itemCol"><a href="#">豆浆机</a> <a href="#">电饭煲</a> <a href="#">微波炉 </a></p>
+					</li>
+					<li class="J_MenuItem">
+						<h3><span></span><a href="#">中小型/大学 </a></h3>
+						<p class="itemCol"><a href="#">耳机 </a> <a href="#">硬盘播放器 </a> <a href="#">组合音响 </a></p>
+					</li>
+					<li class="J_MenuItem">
+						<h3><span></span><a href="#">兴趣爱好</a></h3>
+						<p class="itemCol"><a href="#">耳机 </a> <a href="#">硬盘播放器 </a> <a href="#">组合音响 </a></p>
+					</li>
+					<li class="J_MenuItem">
+						<h3><span></span><a href="#">亲子课堂</a></h3>
+						<p class="itemCol"><a href="#">耳机 </a> <a href="#">硬盘播放器 </a> <a href="#">组合音响 </a></p>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="border">
+				<ul>
+					<li class="mask-top"></li>
+					<li class="mask-bottom"></li>
+				</ul>
+			</div>
+			
+			<div class="cat-subcategory">
+				<div class="shadow">
+					<div class="entity-main">
+						<ul class="shadow-left">
+							<li><a href="#">LED电视</a> <a href="#">LCD电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a> <a href="#">家庭影院</a> <a href="#">配件</a></li>
+							<li><a href="#">壁挂空调</a> <a href="#">柜式空调</a> <a href="#">移动空调</a> <a href="#">冷暖空调</a></li>
+							<li><a href="#">对开门</a> <a href="#">双门冰箱</a> <a href="#">三门冰箱</a> <a href="#">迷你冰箱</a> <a href="#">酒柜</a> <a href="#">冷柜</a></li>
+							<li><a href="#">烟灶套装</a> <a href="#">油烟机</a> <a href="#">燃气灶</a> <a href="#">消毒柜</a> <a href="#">欧式</a> <a href="#">中式</a> <a href="#">侧吸式</a></li>
+							<li><a href="#">滚筒洗衣机</a> <a href="#">双缸洗衣机</a> <a href="#">迷你洗衣机</a> <a href="#">单脱水机</a></li>
+						</ul>
+						<dl class="shadow-right">
+							<dt><b>大家电品牌 </b></dt>
+							<dd><a href="#">海尔</a> <a href="#">TCL</a> <a href="#">海信</a> <a href="#">创维</a> <a href="#">格力</a> <a href="#">方太</a> <a href="#">西门子</a> <a href="#">美的</a> <a href="#">华帝</a> <a href="#">老板</a> <a href="#">奥克斯</a> <a href="#">容声</a> <a href="#">夏普</a> <a href="#">索尼</a> <a href="#">清华同方</a> <a href="#">pangoo</a> <a href="#">康佳</a> <a href="#">长虹</a> <a href="#">帅康</a> <a href="#">LG</a> <a href="#">康宝</a> <a href="#">德意</a> <a href="#">乐华</a> <a href="#">科龙</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="entity-main">
+						<ul class="shadow-left">
+							<li><a href="#">风扇</a> <a href="#">空调扇</a> <a href="#">吊扇</a> <a href="#">落地扇</a> <a href="#">转页扇</a> <a href="#">台扇</a></li>
+							<li><a href="#">挂烫机</a> <a href="#">电熨斗</a> <a href="#">蒸汽刷/干汽刷</a> <a href="#">干鞋器</a> <a href="#">干衣机</a></li>
+							<li><a href="#">吸尘器</a> <a href="#">智能扫地机</a> <a href="#">蒸汽拖把</a> <a href="#">超声波清洁机</a> <a href="#">迷你吸尘器</a></li>
+							<li><a href="#">空气净化器</a> <a href="#">加湿器</a> <a href="#">抽湿器</a> <a href="#">活氧/解毒机</a></li>
+						</ul>
+						<dl class="shadow-right">
+							<dt><b>生活电器/个人护理品牌</b></dt>
+							<dd><a href="#">格力</a> <a href="#">艾美特</a> <a href="#">小狗</a> <a href="#">贝尔莱德</a> <a href="#">飞利浦</a> <a href="#">夏普</a> <a href="#">美的</a> <a href="#">益节</a> <a href="#">伊莱克斯</a> <a href="#">亚都</a> <a href="#">松下</a> <a href="#">KV8</a> <a href="#">天骏</a> <a href="#">科沃斯</a> <a href="#">泰昌</a> <a href="#">松下</a> <a href="#">飞科</a> <a href="#">博朗</a> <a href="#">沙宣</a> <a href="#">朗欣特</a> <a href="#">露华浓</a> <a href="#">奔腾</a> <a href="#">罗氏</a> <a href="#">欧姆龙</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="entity-main">
+						<ul class="shadow-left">
+							<li><a href="#">豆浆机</a> <a href="#">净水器</a> <a href="#">电热水壶</a> <a href="#">榨汁机</a> <a href="#">酸奶机</a> <a href="#">饮水机</a> <a href="#">咖啡机</a> <a href="#">豆芽机</a> <a href="#">果蔬清洁</a></li>
+							<li><a href="#">面包机</a> <a href="#">电烤箱</a> <a href="#">三明治机</a> <a href="#">电动打蛋器</a> <a href="#">电炸锅</a> <a href="#">炙烤炉</a></li>
+							<li><a href="#">电饭煲</a> <a href="#">电压力锅</a> <a href="#">电磁炉</a> <a href="#">微波炉</a> <a href="#">电饼铛</a> <a href="#">料理机</a> <a href="#">电炖锅</a> <a href="#">煮蛋器</a> <a href="#">电蒸锅</a></li>
+						</ul>
+						<dl class="shadow-right">
+							<dt><b>厨房电器品牌</b></dt>
+							<dd><a href="#">九阳</a> <a href="#">美的</a> <a href="#">苏泊尔</a> <a href="#">东菱</a> <a href="#">福库</a> <a href="#">奔腾</a> <a href="#">格兰仕</a> <a href="#">小熊</a> <a href="#">飞利浦</a> <a href="#">德龙</a> <a title="ACA" href="#">     ACA</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="entity-main">
+						<ul class="shadow-left">
+							<li><a href="#">组合音箱</a> <a href="#">HiFi音箱</a> <a href="#">低音炮</a> <a href="#">功放</a> <a href="#">扩音器</a> <a href="#">麦克风</a></li>
+							<li><a href="#">收音机</a> <a href="#">收录机</a> <a href="#">复读机</a></li>
+							<li><a href="#">耳机耳麦</a> <a href="#">硬盘播放器</a> <a href="#">移动/便携DVD</a> <a href="#">影碟机</a> <a href="#">扩音器</a> <a href="#">麦克风</a></li>
+							<li><a href="#">线材</a> <a href="#">插座</a></li>
+						</ul>
+						<dl class="shadow-right">
+							<dt><b>影音电器品牌</b></dt>
+							<dd><a href="#">飞利浦</a> <a href="#">森海塞尔</a> <a href="#">铁三角</a> <a href="#">雅马哈</a> <a href="#">JBL</a> <a href="#">开博尔</a> <a href="#">秋叶原</a> <a href="#">美如画</a> <a href="#">JVC</a> <a href="#">索尼</a> <a href="#">硕美科</a> <a href="#">山水</a> <a href="#">忆捷</a> <a href="#">天敏</a> <a href="#">天龙</a> <a href="#">德生</a> <a href="#">雷柏</a> <a href="#">爱科技</a> <a href="#">魔声</a> <a href="#">雷蛇</a> <a href="#">迪优美特</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="entity-main">
+						<ul class="shadow-left">
+							<li><a href="#">LED电视</a> <a href="#">LCD电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a> <a href="#">家庭影院</a> <a href="#">配件</a></li>
+							<li><a href="#">壁挂空调</a> <a href="#">柜式空调</a> <a href="#">移动空调</a> <a href="#">冷暖空调</a></li>
+							<li><a href="#">对开门</a> <a href="#">双门冰箱</a> <a href="#">三门冰箱</a> <a href="#">迷你冰箱</a> <a href="#">酒柜</a> <a href="#">冷柜</a></li>
+							<li><a href="#">烟灶套装</a> <a href="#">油烟机</a> <a href="#">燃气灶</a> <a href="#">消毒柜</a> <a href="#">欧式</a> <a href="#">中式</a> <a href="#">侧吸式</a></li>
+							<li><a href="#">滚筒洗衣机</a> <a href="#">双缸洗衣机</a> <a href="#">迷你洗衣机</a> <a href="#">单脱水机</a></li>
+						</ul>
+						<dl class="shadow-right">
+							<dt><b>大家电品牌 </b></dt>
+							<dd><a href="#">海尔</a> <a href="#">TCL</a> <a href="#">海信</a> <a href="#">创维</a> <a href="#">格力</a> <a href="#">方太</a> <a href="#">西门子</a> <a href="#">美的</a> <a href="#">华帝</a> <a href="#">老板</a> <a href="#">奥克斯</a> <a href="#">容声</a> <a href="#">夏普</a> <a href="#">索尼</a> <a href="#">清华同方</a> <a href="#">pangoo</a> <a href="#">康佳</a> <a href="#">长虹</a> <a href="#">帅康</a> <a href="#">LG</a> <a href="#">康宝</a> <a href="#">德意</a> <a href="#">乐华</a> <a href="#">科龙</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="entity-main">
+						<ul class="shadow-left">
+							<li><a href="#">组合音箱</a> <a href="#">HiFi音箱</a> <a href="#">低音炮</a> <a href="#">功放</a> <a href="#">扩音器</a> <a href="#">麦克风</a></li>
+							<li><a href="#">收音机</a> <a href="#">收录机</a> <a href="#">复读机</a></li>
+							<li><a href="#">耳机耳麦</a> <a href="#">硬盘播放器</a> <a href="#">移动/便携DVD</a> <a href="#">影碟机</a> <a href="#">扩音器</a> <a href="#">麦克风</a></li>
+							<li><a href="#">线材</a> <a href="#">插座</a></li>
+						</ul>
+						<dl class="shadow-right">
+							<dt><b>影音电器品牌</b></dt>
+							<dd><a href="#">飞利浦</a> <a href="#">森海塞尔</a> <a href="#">铁三角</a> <a href="#">雅马哈</a> <a href="#">JBL</a> <a href="#">开博尔</a> <a href="#">秋叶原</a> <a href="#">美如画</a> <a href="#">JVC</a> <a href="#">索尼</a> <a href="#">硕美科</a> <a href="#">山水</a> <a href="#">忆捷</a> <a href="#">天敏</a> <a href="#">天龙</a> <a href="#">德生</a> <a href="#">雷柏</a> <a href="#">爱科技</a> <a href="#">魔声</a> <a href="#">雷蛇</a> <a href="#">迪优美特</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--all_class end-->
+	</div>
+	<!--banner end-->
+
+	<!--central_content start-->
+	<div class="central_content_1">
+		<div class="type_line">
+			<h2>猜你喜欢</h2>
+			<div class="change">换一批</div>
+		</div>
+		<div class="class_name">
+			<ul>
+				<li>
+					<img src="images/class_name01.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+				<li><img src="images/class_name02.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+				<li><img src="images/class_name03.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+				<li><img src="images/class_name04.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+				<li class="nonem">
+					<img src="images/class_name05.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+			</ul>
+		</div>
+		<div class="type_line1">
+			<h2>热门课程</h2>
+		</div>
+		<div class="class_name">
+			<ul>
+				<li>
+					<img src="images/class_name01.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+				<li><img src="images/class_name02.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+				<li><img src="images/class_name03.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+				<li><img src="images/class_name04.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+				<li class="nonem">
+					<img src="images/class_name05.jpg" />
+					<h2>网页设计课程</h2>
+					<p><span>免费</span> 丨 和成教育</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--central_content end-->
+
+	<div class="central_content_2" id="gray">
+		<div class="IT_train">
+			<div class="train_line">
+				<h2>IT培训</h2>
+				<div class="train_menu">
+					<ul>
+						<li>推荐</li>
+						<li>设计制作</li>
+						<li>编程开发</li>
+						<li>最新发布</li>
+					</ul>
+				</div>
+			</div>
+			<div class="train_list">
+				<div class="train_imgbg">
+					<div class="train_img"></div>
+				</div>
+				<div class="train_class">
+					<div class="train_class_content">
+						<ul>
+							<li>
+								<img src="images/class_name01.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li><img src="images/class_name02.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li><img src="images/class_name03.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li>
+								<img src="images/class_name01.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li><img src="images/class_name02.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li><img src="images/class_name03.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+						</ul>
+					</div>
+					<div class="train_class_list">
+						<div class="menu_list"><ul><li>免费排行</li><li>付费排行</li><ul></div>
+						<div class="ranking">
+							<ul>
+								<li class="first_li"><span class="span1">1</span>
+									<div class="first">
+										<p>【全套】PS教程 PS入门</p>
+										<img class="img" src="images/IT_train_first.png" />
+										<div class="people">
+											<h3>8066人</h3>
+											<font>学神IT教育</font>
+										</div>
+									</div>
+								</li>
+								<li><span class="span2">2</span><a>平面设计实战CAD速成班</a></li>
+								<li><span class="span3">3</span><a>CAD速成班CAD速成班</a></li>
+								<li><span>4</span><a>PS教程 PS入门</a></li>
+								<li><span>5</span><a>平面设计实战CAD速成班</a></li>
+								<li><span>6</span><a>CAD速成班CAD速成班</a></li>
+								<li><span>7</span><a>PS教程 PS入门</a></li>
+								<li><span>8</span><a>平面设计实战CAD速成班</a></li>
+								<li><span>9</span><a>CAD速成班CAD速成班</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="central_content_2" id="white">
+		<div class="IT_train">
+			<div class="train_line">
+				<h2>IT培训</h2>
+				<div class="train_menu">
+					<ul>
+						<li>推荐</li>
+						<li>设计制作</li>
+						<li>编程开发</li>
+						<li>最新发布</li>
+					</ul>
+				</div>
+			</div>
+			<div class="train_list">
+				<div class="train_imgbg">
+					<div class="train_img"></div>
+				</div>
+				<div class="train_class">
+					<div class="train_class_content">
+						<ul>
+							<li>
+								<img src="images/class_name01.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li><img src="images/class_name02.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li><img src="images/class_name03.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li>
+								<img src="images/class_name01.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li><img src="images/class_name02.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+							<li><img src="images/class_name03.jpg" />
+								<h2>网页设计课程</h2>
+								<p><span>免费</span> 丨 和成教育</p>
+							</li>
+						</ul>
+					</div>
+					<div class="train_class_list">
+						<div class="menu_list"><ul><li>免费排行</li><li>付费排行</li><ul></div>
+						<div class="ranking">
+							<ul>
+								<li class="first_li"><span class="span1">1</span>
+									<div class="first">
+										<p>【全套】PS教程 PS入门</p>
+										<img class="img" src="images/IT_train_first.png" />
+										<div class="people">
+											<h3>8066人</h3>
+											<font>学神IT教育</font>
+										</div>
+									</div>
+								</li>
+								<li><span class="span2">2</span><a>平面设计实战CAD速成班</a></li>
+								<li><span class="span3">3</span><a>CAD速成班CAD速成班</a></li>
+								<li><span>4</span><a>PS教程 PS入门</a></li>
+								<li><span>5</span><a>平面设计实战CAD速成班</a></li>
+								<li><span>6</span><a>CAD速成班CAD速成班</a></li>
+								<li><span>7</span><a>PS教程 PS入门</a></li>
+								<li><span>8</span><a>平面设计实战CAD速成班</a></li>
+								<li><span>9</span><a>CAD速成班CAD速成班</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="central_content_3">
+		<div class="college">
+			<div class="left_png">
+				<h1>中小学/大学</h1>
+				<img src="images/college.jpg" />
+			</div>
+			<div class="right_png">
+				<div class="title_line">
+					<ul>
+						<li>推荐</li>
+						<li>考研/自考</li>
+						<li>高考备战</li>
+						<li>高中</li>
+						<li>最新发布</li>
+					</ul>
+				</div>
+				<div class="college_list">
+					<ul>
+						<li>
+							<img src="images/class_name01.jpg" />
+							<h2>网页设计课程</h2>
+							<p><span>免费</span> 丨 和成教育</p>
+						</li>
+						<li><img src="images/class_name02.jpg" />
+							<h2>网页设计课程</h2>
+							<p><span>免费</span> 丨 和成教育</p>
+						</li>
+						<li><img src="images/class_name03.jpg" />
+							<h2>网页设计课程</h2>
+							<p><span>免费</span> 丨 和成教育</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/all_class_menu.js"></script>
+	<script type="text/javascript">
+		jQuery(".slider .bd li").first().before( jQuery(".slider .bd li").last() );
+		jQuery(".slider").hover(function(){ jQuery(this).find(".arrow").stop(true,true).fadeIn(300) },function(){ jQuery(this).find(".arrow").fadeOut(300) });				jQuery(".slider").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop",autoPlay:true, vis:3,autoPage:true, trigger:"click"});
+	</script>
+</body>
+</html>

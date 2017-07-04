@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+a:link,a:visited{color:#666;font-size:12px;text-decoration:none;}
+
+/* mallCategory */
+.mallCategory{position:relative;top:-426px;width:220px;border-bottom:1px solid #1681C4;background:#0477C0;z-index:5;}
+.mallCategory .border{width:220px;height:70px;position:absolute;top:370px;z-index:14;display:none;}
+.mallCategory .border .mask-top{width:220px;height:39px;border-right:solid 2px #0477C0;}
+.mallCategory .border .mask-bottom{width:220px;height:34px;border-right:solid 2px #0477C0;}
+
+.catList h3{padding-left:19px;height:40px;font-weight:normal;}
+.catList h3 span{float:right;display:block;margin:16px 10px 0 0;width:5px;height:7px;background:url(../images/sprite-700.png) no-repeat scroll 0 -621px transparent;}
+.catList h3 a{overflow:hidden;height:40px;font-size:15px;line-height:40px;font-weight:none;}
+
+.catList li{overflow:hidden;height:70px;border-bottom:1px solid #1681C4;}
+.catList li a{color:#fff;}
+.catList ul li:hover,.catList ul li:active,.catList ul li:visited,.catList ul li:link{background-color:#0264a3;}
+.catList .itemCol{overflow:hidden;padding:7px 0 0 20px;width:164px;height:20px;_zoom:1;}
+.catList .clearfix .J_MenuItem a:hover{text-decoration:underline;text-decoration-color:#fff;}
+
+.catList p a{margin-right:3px;color:#97D2F7;font-size:14px;}
+.catList p a:hover{color:#666;color:#97D2F7;}
+.cat-subcategory{position:absolute;top:100%;left:220px;z-index:10;width:457px;border:2px solid #0477C0;background:#fff;display:none;}
+
+.shadow{position:relative;}
+.shadow a,.shadow a:hover{color:#666;}
+.shadow-left{float:left;display:inline;width:232px;min-height:100px;_height:100px;}
+.shadow-left li{float:left;margin-top:12px;padding-bottom:10px;width:220px;background:url(../images/listbg.gif) left bottom no-repeat;line-height:24px;}
+.shadow-left li a{display:inline-block;margin-right:19px;white-space:nowrap;}
+.shadow-right{float:right;display:inline;padding:12px 0 0 18px;width:164px;}
+.shadow-right dt{background:0;height:30px;}
+.shadow-right dt b{font-size:12px;font-weight:bold;color:#1D1D1E;}
+.shadow-right a{float:left;margin:4px 9px 4px -9px;padding:0 8px;height:15px;border-left:1px solid #eee;white-space:nowrap;line-height:15px;}
+.shadow-right dd{overflow:hidden;width:164px;}
+.entity-main{overflow:hidden;padding:0 0 0 39px;height:100%;background:url(../images/listbg2.gif) right top repeat-y;}
